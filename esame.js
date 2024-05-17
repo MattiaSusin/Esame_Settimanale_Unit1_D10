@@ -128,7 +128,7 @@ function onlyLetters(stringa) {
 let soloLettere = onlyLetters("ABBIAMO VINTO FACENDO 10 GOL")
 console.log(soloLettere)
 
-console.log("------------------------------ESERCIZIO 5----------------------------------------------------------------")
+console.log("------------------------------ESERCIZIO 6----------------------------------------------------------------")
 
 //Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 
@@ -141,3 +141,82 @@ function isThisAnEmail(stringa) {
 }
 
 console.log(isThisAnEmail("m.susin28@gmail.com"))
+
+console.log("------------------------------ESERCIZIO 7----------------------------------------------------------------")
+
+//Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
+
+function whatDayIsIt() {
+    const weekDay = ["Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato","Domenica"]; 
+    let dateNow = new Date();
+     nowDay = dateNow.getDay();
+    return weekDay[nowDay-1];
+}
+
+console.log(whatDayIsIt())
+
+console.log("------------------------------ESERCIZIO 8----------------------------------------------------------------")
+
+//Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
+//Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente una proprietà "sum":
+//il suo valore deve rappresentare il totale di tutti i valori estratti con le invocazioni di dice().
+//L'oggetto ritornato deve anche contenere una proprietà "values", contenente un array con tutti i valori estratti dalle invocazioni di dice().
+
+//Example:
+//rollTheDices(3) => ritorna {
+//  sum: 10
+//  values: [3, 3, 4]
+
+
+/* function rollTheDices(number) {
+    const valori = [];
+    const 
+
+   for (let i = 0; index < number; index++) {
+    const richiamo = dice();
+
+     
+   }
+
+    
+} */
+
+rollTheDices = dice();
+console.log(dice(3))
+
+
+
+
+console.log("-------------------------------ARRAY & OGGETTI-----------------------------------------------------------")
+
+
+console.log("------------------------------ESERCIZIO 11----------------------------------------------------------------")
+
+//Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
+//in esso la proprietà chiamata come la stringa passata come secondo parametro.
+
+const obj = {
+    string : "Hello World"
+}
+const string = "Hi Mate"
+function deleteProp(oggetto , stringa) {
+    if (obj != stringa) {
+        delete obj.string;
+        const newObj = obj; 
+        return + newObj;
+    }else {
+        return stringa
+    } 
+}
+
+console.log(deleteProp(obj , string))
+
+
+
+console.log("------------------------------ESERCIZIO 12----------------------------------------------------------------")
+
+//Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
+
+function newestMovie() {
+    
+}
