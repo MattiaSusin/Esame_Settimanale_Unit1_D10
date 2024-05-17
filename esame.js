@@ -212,11 +212,6 @@ function deleteProp(oggetto , stringa) {
 console.log(deleteProp(obj , string))
 
 
-
-console.log("------------------------------ESERCIZIO 12----------------------------------------------------------------")
-
-//Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
-   
  const movies = [
         {
           Title: 'The Lord of the Rings: The Fellowship of the Ring',
@@ -336,17 +331,47 @@ console.log("------------------------------ESERCIZIO 12-------------------------
       console.log("------------------------------ESERCIZIO 12----------------------------------------------------------------")
 
 //Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
+
+const newestMovie = function () {
+    return movies.reduce((accumulatore, movie) => accumulatore.Year > movie.Year ? accumulatore : movie);
+  }
+
+  console.log(newestMovie())
+    
+console.log("------------------------------ESERCIZIO 13----------------------------------------------------------------")
+
+    // Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
+
+    const countMovies = (array) => {
+        return array.length
+      }
       
-      function newestMovie() {
-        let result = {
-            Year : 2100}
-            movies.forEach((movie) => {
-              let currentYear = parseInt(movies.Year)
-              if (currentYear > result.Year) {
-                result = movie
-              }
-            })
-            return result
-        }
-     console.log(newestMovie())
+      console.log(countMovies(movies))
+
+      console.log("------------------------------ESERCIZIO 14----------------------------------------------------------------") 
+
+      //Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito
+
+      const onlyAge = (array) => {
+        return array.map((elem) => elem.Age)
+      }
       
+      console.log(onlyAge(movies))
+
+      console.log("------------------------------ESERCIZIO 15----------------------------------------------------------------") 
+
+      //Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
+
+      const onlyInThisMillennium = (array) => {
+        return array.filter((movie) => {
+          return parseInt(movie.Year) > 1999
+        })
+      }
+      
+      console.log(onlyInThisMillennium(movies))
+
+      console.log("------------------------------ESERCIZIO 16----------------------------------------------------------------") 
+
+      //Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
+
+
