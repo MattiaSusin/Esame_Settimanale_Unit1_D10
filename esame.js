@@ -356,7 +356,7 @@ console.log("------------------------------ESERCIZIO 13-------------------------
         return array.map((elem) => elem.Age)
       }
       
-      console.log(onlyAge(movies))
+      console.log(onlyAge(movies)) 
 
       console.log("------------------------------ESERCIZIO 15----------------------------------------------------------------") 
 
@@ -364,7 +364,7 @@ console.log("------------------------------ESERCIZIO 13-------------------------
 
       const onlyInThisMillennium = (array) => {
         return array.filter((movie) => {
-          return parseInt(movie.Year) > 1999
+          return parseInt(movie.Year) < 1999
         })
       }
       
@@ -375,3 +375,29 @@ console.log("------------------------------ESERCIZIO 13-------------------------
       //Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 
 
+      const sumAllTheYears = (array) => {
+        return array.reduce((acc, curr) => acc + parseInt(curr.Year), 0)
+      }
+      
+      console.log(sumAllTheYears(movies))
+
+      console.log("------------------------------ESERCIZIO 17----------------------------------------------------------------") 
+      //Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
+
+    
+        function searchByTitle(title) {
+            return movies.filter(movie => movie.Title.toLowerCase().includes(title.toLowerCase()));
+          }
+          
+          let results = searchByTitle('Lord');
+          console.log(results);
+
+        console.log("------------------------------ESERCIZIO 18----------------------------------------------------------------") 
+
+        //Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
+        //"match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
+
+
+        console.log("------------------------------ESERCIZIO 19----------------------------------------------------------------") 
+
+        //
