@@ -400,4 +400,49 @@ console.log("------------------------------ESERCIZIO 13-------------------------
 
         console.log("------------------------------ESERCIZIO 19----------------------------------------------------------------") 
 
-        //
+        //Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
+
+        function removeIndex(numero) {
+            const newArray = [...movies]; // Creo una copia dell'array originale
+            newArray.splice(numero, 1); // Rimuovo l'elemento nella posizione specificata
+            return newArray; // Ritorno il nuovo array senza l'elemento rimoss
+        }
+        const moviesWithoutIndex2 = removeIndex(2);
+        console.log(moviesWithoutIndex2);
+
+        console.log("------------------------------ESERCIZIO 20----------------------------------------------------------------") 
+
+        //Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
+
+        const contenitoreBody = document.getElementById("contenitore")
+
+        console.log("------------------------------ESERCIZIO 21----------------------------------------------------------------") 
+
+        // Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
+
+        const allLi = document.getElementsByTagName("li")
+
+        console.log("------------------------------ESERCIZIO 22----------------------------------------------------------------") 
+
+        //Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
+
+     
+    
+
+          console.log("------------------------------ESERCIZIO 24----------------------------------------------------------------") 
+        //Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
+
+        const addToTheSecond = function (content) {
+            const ul = document.getElementById('myList')
+            const li = document.createElement('li')
+            li.innerText = content
+            ul.appendChild(li)
+        }
+        console.log("------------------------------ESERCIZIO 25----------------------------------------------------------------") 
+        //Scrivi una funzione per svuotare la lista non ordinata con id "myList".
+
+        function cestino() {
+            const list = document.getElementById("myList");
+            list.innerHTML = ""; 
+          }
+          cestino();
