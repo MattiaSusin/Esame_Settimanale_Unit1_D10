@@ -39,7 +39,6 @@ delete me.age
 console.log(me)
 
 console.log("------------------------------ESERCIZIO E----------------------------------------------------------------")
-
 //Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 
 me.skills = []
@@ -113,3 +112,32 @@ function deleteOne(stringa , booleano) {
 ;
 console.log(deleteOne("SCRIPT",false))
 /* console.log(deleteOne) */
+
+console.log("------------------------------ESERCIZIO 5----------------------------------------------------------------")
+
+//Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche
+
+//Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
+
+function onlyLetters(stringa) {
+    if (stringa === stringa) {
+        let soloLettere = stringa.replace(/[0-9]?/g,"");
+        return soloLettere;
+    }
+}
+let soloLettere = onlyLetters("ABBIAMO VINTO FACENDO 10 GOL")
+console.log(soloLettere)
+
+console.log("------------------------------ESERCIZIO 5----------------------------------------------------------------")
+
+//Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
+
+function isThisAnEmail(stringa) {
+    if (stringa.includes("@")){
+        return true;     
+    }else{
+        return "FATTI UNA E-MAIL"
+    }
+}
+
+console.log(isThisAnEmail("m.susin28@gmail.com"))
